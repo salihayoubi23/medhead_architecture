@@ -1,37 +1,211 @@
-# MedHead – Architecture Repository
+# 📐 MedHead – Architecture Repository
 
-Ce dépôt contient l’ensemble des documents d’architecture relatifs à la preuve de concept (PoC) du système d’intervention d’urgence en temps réel du consortium MedHead.
+Ce repository contient l’ensemble des documents d’architecture relatifs à la preuve de concept (PoC) du système d’intervention d’urgence du consortium **MedHead**.
 
-## Objectif
-Ce repository sert de support documentaire pour :
-- comprendre le contexte et les enjeux du projet MedHead ;
-- centraliser les documents d’architecture fournis par le consortium ;
-- présenter le document de reporting de la PoC, destiné au comité d’architecture.
+Il sert de support documentaire pour :
 
-## Structure du repository
+-   comprendre le contexte métier et technique du projet
+    
+-   centraliser les documents fournis par le consortium
+    
+-   présenter les choix architecturaux réalisés
+    
+-   exposer les résultats et enseignements de la PoC
+    
 
-### 00_sources
-Contient les documents sources fournis par le consortium MedHead :
-- Déclaration des travaux d’architecture
-- Document de définition de l’architecture
-- Principes de l’architecture
-- Données de référence sur les spécialités NHS
-- Exigences pour le développement de la preuve de concept
+----------
+
+## 🎯 Objectifs du repository
+
+-   fournir une vision claire de l’architecture cible
+    
+-   démontrer la conformité aux principes imposés
+    
+-   justifier les technologies retenues
+    
+-   documenter les performances et la qualité de la PoC
+    
+
+----------
+
+## 📂 Structure du repository
+
+### 📁 00_sources
+
+Documents sources fournis par MedHead :
+
+-   énoncé des travaux d’architecture (TOGAF)
+    
+-   principes d’architecture
+    
+-   document de définition de l’architecture
+    
+-   exigences de la PoC
+    
+-   données de référence NHS (spécialités)
+    
+-   feuille de route du projet
+    
 
 Ces documents constituent les entrées officielles du travail d’architecture.
 
-### 01_reporting
-Contiendra le document de reporting de la PoC.
-Ce document synthétisera :
-- les choix techniques réalisés,
-- la conformité aux principes et aux normes,
-- les résultats obtenus,
-- les enseignements tirés de la preuve de concept.
+----------
 
-### 02_diagrams
-Contiendra les schémas d’architecture et diagrammes utilisés pour illustrer la PoC
-(architecture applicative, flux, composants, etc.).
+### 📁 01_reporting
 
-## Repositories associés
-- Backend (Spring Boot) : https://github.com/salihayoubi23/medhead-backend
-- Frontend (React) : https://github.com/salihayoubi23/medhead-frontend
+Contient le **document de reporting de la PoC**.
+
+Ce document présente :
+
+-   les choix techniques backend et frontend
+    
+-   la conformité aux principes d’architecture
+    
+-   l’intégration des services externes (ORS)
+    
+-   les résultats des tests automatisés
+    
+-   les résultats des tests de performance
+    
+-   les limites et recommandations
+    
+
+----------
+
+### 📁 02_diagrams
+
+Contient les schémas et diagrammes :
+
+-   architecture applicative
+    
+-   flux de données
+    
+-   composants techniques
+    
+-   interactions microservices
+    
+
+----------
+
+## 🔗 Repositories associés
+
+Code complet (backend + frontend + performance + CI) :
+
+[https://github.com/salihayoubi23/medhead-code](https://github.com/salihayoubi23/medhead-code)
+
+Repository architecture :
+
+[https://github.com/salihayoubi23/medhead_architecture](https://github.com/salihayoubi23/medhead_architecture)
+
+----------
+
+## 🧱 Vue d’ensemble de l’architecture
+
+La PoC repose sur :
+
+-   Frontend React (UI utilisateur)
+    
+-   Backend Spring Boot (API REST)
+    
+-   PostgreSQL (persistance)
+    
+-   OpenRouteService (routage réel)
+    
+-   CI/CD GitHub Actions
+    
+-   Tests automatisés et de charge
+    
+
+Approche :
+
+-   orientée microservices
+    
+-   découplage front/back
+    
+-   intégration continue
+    
+-   validation par la performance
+    
+
+----------
+
+## 🔐 Sécurité (approche d’architecture)
+
+Dans le cadre de la PoC :
+
+-   échanges front/back via API REST
+    
+-   CORS configuré
+    
+-   secrets externalisés
+    
+
+Architecture cible :
+
+-   HTTPS/TLS
+    
+-   OAuth2 / OpenID Connect
+    
+-   JWT
+    
+-   contrôle d’accès par rôles
+    
+-   audit des accès
+    
+
+----------
+
+## 🛡️ RGPD – Privacy by Design
+
+Principes appliqués dans la PoC :
+
+-   minimisation des données
+    
+-   aucune donnée patient stockée
+    
+
+Architecture cible :
+
+-   séparation identité/données médicales
+    
+-   chiffrement
+    
+-   anonymisation
+    
+-   politiques de rétention
+    
+-   droit à l’oubli
+    
+
+----------
+
+## 📊 Performance et qualité
+
+La PoC intègre :
+
+-   tests unitaires et d’intégration automatisés
+    
+-   pipeline CI/CD
+    
+-   tests de charge Apache JMeter
+    
+-   rapports HTML
+    
+
+Objectif :
+
+-   démontrer la robustesse sous charge
+    
+-   valider les temps de réponse
+    
+-   préparer une montée en charge future
+    
+
+----------
+
+## 👤 Auteur
+
+Saliha Youbi  
+Projet OpenClassrooms – Architecte Logiciel
+
+----------
